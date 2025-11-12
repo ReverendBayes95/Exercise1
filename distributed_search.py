@@ -86,7 +86,7 @@ def parallel_search(s, x, p):
     return 1 if any(results) else 0
 
 if __name__ == '__main__':
-    input_sequence = create_input_string(all_characters, 100000000)
+    input_sequence = create_input_string(all_characters, 10000000)
     x = input_sequence[-1]
 
     import time
@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
     # Time parallel search
     start = time.perf_counter()
-    par_result = parallel_search(input_sequence, x, 4)
+    par_result = parallel_search(input_sequence, x, 3)
     par_time = time.perf_counter() - start
     print(f"Parallel search time: {par_time:.6f} seconds")
 
